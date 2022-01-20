@@ -7,13 +7,14 @@ var majorityElement = function(nums) {
     let countHash = {}
     
     for(let i=0; i<nums.length; i++){
-        if (countHash[nums[i]]){
-            countHash[nums[i]]++
-        } else {
-            countHash[nums[i]] = 1
+        countHash[nums[i]] ? countHash[nums[i]]++ : countHash[nums[i]] = 1
+        
+        if (countHash[nums[i]] > majority){
+            return nums[i]
         }
+        
     }
     
-    return Object.keys(countHash).find(key => countHash[key] > majority)
+   
     
 };
