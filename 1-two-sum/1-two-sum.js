@@ -37,7 +37,6 @@ var twoSum = function(nums, target) {
         complements[nums[i]] = i 
     }
      
-    //  console.log(complements)
     return pairIndices
         
 };
