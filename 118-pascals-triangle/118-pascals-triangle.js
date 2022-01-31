@@ -14,13 +14,8 @@ var generate = function(numRows) {
             let prevRow = triangle[i-1]
             row[j] = prevRow[j] + prevRow[j-1]
         }
-        triangle[i] = row
-        
+        triangle[i] = row  
     }
     
     return triangle
-    
-    
-    
-    
 };
